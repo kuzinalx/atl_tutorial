@@ -1,0 +1,11 @@
+Debug/
+DebugPS/
+Release/
+ReleasePS/
+ipch/
+*.suo
+*.sdf
+*.opensdf
+*.filters
+*.aps
+bin/

@@ -1,0 +1,52 @@
+// Polygon.idl : IDL source for Polygon
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Polygon.tlb) and marshalling code.
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(5F97EF39-6B5A-4FA2-9171-74FDEF302391),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IPolyCtl : IDispatch{
+	[propput, bindable, requestedit, id(DISPID_FILLCOLOR)]
+	HRESULT FillColor([in]OLE_COLOR clr);
+	[propget, bindable, requestedit, id(DISPID_FILLCOLOR)]
+	HRESULT FillColor([out, retval]OLE_COLOR* pclr);
+	[propget, id(1)] HRESULT Sides([out, retval] SHORT* pVal);
+	[propput, id(1)] HRESULT Sides([in] SHORT newVal);
+};
+
+[
+	uuid(86E6C877-B5D8-4F9E-86F0-4BD2DA3696F2),
+	version(1.0),
+]
+library PolygonLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(89319F1C-8EFF-4BED-AD99-BBA3317FA290)		
+	]
+	dispinterface _IPolyCtlEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(0A6BA877-E9D4-465B-B2E5-EE805DC9FF56),		
+		control
+	]
+	coclass PolyCtl
+	{
+		[default] interface IPolyCtl;
+		[default, source] dispinterface _IPolyCtlEvents;
+	};
+};
+

@@ -12,6 +12,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PolygonPS", "Polygon\Polygo
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsApplication1", "WindowsApplication1\WindowsApplication1.vbproj", "{E774770F-D5A0-4232-AF0D-D3B4CF26EC46}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "polygon_cli", "polygon_cli\polygon_cli.vcxproj", "{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,16 @@ Global
 		{E774770F-D5A0-4232-AF0D-D3B4CF26EC46}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E774770F-D5A0-4232-AF0D-D3B4CF26EC46}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E774770F-D5A0-4232-AF0D-D3B4CF26EC46}.Release|Win32.ActiveCfg = Release|Any CPU
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Debug|Win32.Build.0 = Debug|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Release|Win32.ActiveCfg = Release|Win32
+		{8AC3DB63-D6C8-4988-B458-4B5927E5C56E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

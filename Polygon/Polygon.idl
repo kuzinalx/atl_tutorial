@@ -22,6 +22,8 @@ interface IPolyCtl : IDispatch{
 	HRESULT FillColor([out, retval]OLE_COLOR* pclr);
 	[propget, id(1)] HRESULT Sides([out, retval] SHORT* pVal);
 	[propput, id(1)] HRESULT Sides([in] SHORT newVal);
+	[id(2)] HRESULT DrawPoly([in] HDC dc, [in] LPCRECTL rect);
+	[id(3)] HRESULT DrawPoly2([in] LONG dc, [in] LONG* pr);
 };
 
 [

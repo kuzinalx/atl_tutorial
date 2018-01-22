@@ -48,3 +48,33 @@ void CPolyCtl::CalcPoints(const RECT& rc)
       dblAngle += dblDiff;
    }
 }
+
+
+
+
+STDMETHODIMP CPolyCtl::DrawPoly(HDC dc, LPCRECTL rect)
+{
+	// TODO: Add your implementation code here
+	ATL_DRAWINFO di;
+	//di.prcBounds = rect;
+	RECTL r;
+	r.bottom = rect->bottom;
+	r.top = rect->top;
+	r.left = rect->left;
+	r.right = rect->right;
+	di.prcBounds = &r;
+
+	di.hdcDraw = dc;
+	return OnDraw( di );
+	//return S_OK;
+}
+
+
+STDMETHODIMP CPolyCtl::DrawPoly2(LONG dc, LONG* pr)
+{
+	// TODO: Add your implementation code here
+	HDC hdc = ( HDC )dc;
+	LPCRECTL lprect = ( LPCRECTL )pr;
+	return DrawPoly( hdc, lprect );
+	//return S_OK;
+}

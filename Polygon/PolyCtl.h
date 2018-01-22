@@ -177,6 +177,8 @@ public:
 	STDMETHOD(get_Sides)(SHORT* pVal);
 	STDMETHOD(put_Sides)(SHORT newVal);
 	void CalcPoints(const RECT& rc);
+	STDMETHOD(DrawPoly)(HDC dc, LPCRECTL rect);
+	STDMETHOD(DrawPoly2)(LONG dc, LONG* pr);
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(PolyCtl), CPolyCtl)

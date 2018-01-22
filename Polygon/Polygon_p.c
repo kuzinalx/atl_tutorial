@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 8.00.0603 */
-/* at Fri Jan 19 15:54:17 2018
+/* at Mon Jan 22 01:20:08 2018
  */
 /* Compiler settings for Polygon.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 
@@ -49,11 +49,11 @@
 
 #include "Polygon_i.h"
 
-#define TYPE_FORMAT_STRING_SIZE   11                                
-#define PROC_FORMAT_STRING_SIZE   145                               
+#define TYPE_FORMAT_STRING_SIZE   63                                
+#define PROC_FORMAT_STRING_SIZE   229                               
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
-#define WIRE_MARSHAL_TABLE_SIZE   0            
+#define WIRE_MARSHAL_TABLE_SIZE   1            
 
 typedef struct _Polygon_MIDL_TYPE_FORMAT_STRING
     {
@@ -90,6 +90,7 @@ extern const MIDL_SERVER_INFO IPolyCtl_ServerInfo;
 extern const MIDL_STUBLESS_PROXY_INFO IPolyCtl_ProxyInfo;
 
 
+extern const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TABLE_SIZE ];
 
 #if !defined(__RPC_WIN32__)
 #error  Invalid build platform for this stub.
@@ -232,6 +233,80 @@ static const Polygon_MIDL_PROC_FORMAT_STRING Polygon__MIDL_ProcFormatString =
 /* 142 */	0x8,		/* FC_LONG */
 			0x0,		/* 0 */
 
+	/* Procedure DrawPoly */
+
+/* 144 */	0x33,		/* FC_AUTO_HANDLE */
+			0x6c,		/* Old Flags:  object, Oi2 */
+/* 146 */	NdrFcLong( 0x0 ),	/* 0 */
+/* 150 */	NdrFcShort( 0xb ),	/* 11 */
+/* 152 */	NdrFcShort( 0x10 ),	/* x86 Stack size/offset = 16 */
+/* 154 */	NdrFcShort( 0x34 ),	/* 52 */
+/* 156 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 158 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
+			0x3,		/* 3 */
+/* 160 */	0x8,		/* 8 */
+			0x5,		/* Ext Flags:  new corr desc, srv corr check, */
+/* 162 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 164 */	NdrFcShort( 0x1 ),	/* 1 */
+/* 166 */	NdrFcShort( 0x0 ),	/* 0 */
+
+	/* Parameter dc */
+
+/* 168 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
+/* 170 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
+/* 172 */	NdrFcShort( 0x22 ),	/* Type Offset=34 */
+
+	/* Parameter rect */
+
+/* 174 */	NdrFcShort( 0x10a ),	/* Flags:  must free, in, simple ref, */
+/* 176 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 178 */	NdrFcShort( 0x30 ),	/* Type Offset=48 */
+
+	/* Return value */
+
+/* 180 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
+/* 182 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
+/* 184 */	0x8,		/* FC_LONG */
+			0x0,		/* 0 */
+
+	/* Procedure DrawPoly2 */
+
+/* 186 */	0x33,		/* FC_AUTO_HANDLE */
+			0x6c,		/* Old Flags:  object, Oi2 */
+/* 188 */	NdrFcLong( 0x0 ),	/* 0 */
+/* 192 */	NdrFcShort( 0xc ),	/* 12 */
+/* 194 */	NdrFcShort( 0x10 ),	/* x86 Stack size/offset = 16 */
+/* 196 */	NdrFcShort( 0x24 ),	/* 36 */
+/* 198 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 200 */	0x44,		/* Oi2 Flags:  has return, has ext, */
+			0x3,		/* 3 */
+/* 202 */	0x8,		/* 8 */
+			0x1,		/* Ext Flags:  new corr desc, */
+/* 204 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 206 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 208 */	NdrFcShort( 0x0 ),	/* 0 */
+
+	/* Parameter dc */
+
+/* 210 */	NdrFcShort( 0x48 ),	/* Flags:  in, base type, */
+/* 212 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
+/* 214 */	0x8,		/* FC_LONG */
+			0x0,		/* 0 */
+
+	/* Parameter pr */
+
+/* 216 */	NdrFcShort( 0x148 ),	/* Flags:  in, base type, simple ref, */
+/* 218 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
+/* 220 */	0x8,		/* FC_LONG */
+			0x0,		/* 0 */
+
+	/* Return value */
+
+/* 222 */	NdrFcShort( 0x70 ),	/* Flags:  out, return, base type, */
+/* 224 */	NdrFcShort( 0xc ),	/* x86 Stack size/offset = 12 */
+/* 226 */	0x8,		/* FC_LONG */
+			0x0,		/* 0 */
+
 			0x0
         }
     };
@@ -249,10 +324,59 @@ static const Polygon_MIDL_TYPE_FORMAT_STRING Polygon__MIDL_TypeFormatString =
 			0x11, 0xc,	/* FC_RP [alloced_on_stack] [simple_pointer] */
 /*  8 */	0x6,		/* FC_SHORT */
 			0x5c,		/* FC_PAD */
+/* 10 */	
+			0x12, 0x0,	/* FC_UP */
+/* 12 */	NdrFcShort( 0x2 ),	/* Offset= 2 (14) */
+/* 14 */	
+			0x2a,		/* FC_ENCAPSULATED_UNION */
+			0x48,		/* 72 */
+/* 16 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 18 */	NdrFcShort( 0x2 ),	/* 2 */
+/* 20 */	NdrFcLong( 0x48746457 ),	/* 1215587415 */
+/* 24 */	NdrFcShort( 0x8008 ),	/* Simple arm type: FC_LONG */
+/* 26 */	NdrFcLong( 0x52746457 ),	/* 1383359575 */
+/* 30 */	NdrFcShort( 0x8008 ),	/* Simple arm type: FC_LONG */
+/* 32 */	NdrFcShort( 0xffff ),	/* Offset= -1 (31) */
+/* 34 */	0xb4,		/* FC_USER_MARSHAL */
+			0x83,		/* 131 */
+/* 36 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 38 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 40 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 42 */	NdrFcShort( 0xffe0 ),	/* Offset= -32 (10) */
+/* 44 */	
+			0x11, 0x0,	/* FC_RP */
+/* 46 */	NdrFcShort( 0x2 ),	/* Offset= 2 (48) */
+/* 48 */	
+			0x15,		/* FC_STRUCT */
+			0x3,		/* 3 */
+/* 50 */	NdrFcShort( 0x10 ),	/* 16 */
+/* 52 */	0x8,		/* FC_LONG */
+			0x8,		/* FC_LONG */
+/* 54 */	0x8,		/* FC_LONG */
+			0x8,		/* FC_LONG */
+/* 56 */	0x5c,		/* FC_PAD */
+			0x5b,		/* FC_END */
+/* 58 */	
+			0x11, 0x8,	/* FC_RP [simple_pointer] */
+/* 60 */	0x8,		/* FC_LONG */
+			0x5c,		/* FC_PAD */
 
 			0x0
         }
     };
+
+static const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TABLE_SIZE ] = 
+        {
+            
+            {
+            HDC_UserSize
+            ,HDC_UserMarshal
+            ,HDC_UserUnmarshal
+            ,HDC_UserFree
+            }
+
+        };
+
 
 
 /* Object interface: IUnknown, ver. 0.0,
@@ -276,7 +400,9 @@ static const unsigned short IPolyCtl_FormatStringOffsetTable[] =
     0,
     36,
     72,
-    108
+    108,
+    144,
+    186
     };
 
 static const MIDL_STUBLESS_PROXY_INFO IPolyCtl_ProxyInfo =
@@ -300,7 +426,7 @@ static const MIDL_SERVER_INFO IPolyCtl_ServerInfo =
     0,
     0,
     0};
-CINTERFACE_PROXY_VTABLE(11) _IPolyCtlProxyVtbl = 
+CINTERFACE_PROXY_VTABLE(13) _IPolyCtlProxyVtbl = 
 {
     &IPolyCtl_ProxyInfo,
     &IID_IPolyCtl,
@@ -314,7 +440,9 @@ CINTERFACE_PROXY_VTABLE(11) _IPolyCtlProxyVtbl =
     (void *) (INT_PTR) -1 /* IPolyCtl::put_FillColor */ ,
     (void *) (INT_PTR) -1 /* IPolyCtl::get_FillColor */ ,
     (void *) (INT_PTR) -1 /* IPolyCtl::get_Sides */ ,
-    (void *) (INT_PTR) -1 /* IPolyCtl::put_Sides */
+    (void *) (INT_PTR) -1 /* IPolyCtl::put_Sides */ ,
+    (void *) (INT_PTR) -1 /* IPolyCtl::DrawPoly */ ,
+    (void *) (INT_PTR) -1 /* IPolyCtl::DrawPoly2 */
 };
 
 
@@ -327,6 +455,8 @@ static const PRPC_STUB_FUNCTION IPolyCtl_table[] =
     NdrStubCall2,
     NdrStubCall2,
     NdrStubCall2,
+    NdrStubCall2,
+    NdrStubCall2,
     NdrStubCall2
 };
 
@@ -334,7 +464,7 @@ CInterfaceStubVtbl _IPolyCtlStubVtbl =
 {
     &IID_IPolyCtl,
     &IPolyCtl_ServerInfo,
-    11,
+    13,
     &IPolyCtl_table[-3],
     CStdStubBuffer_DELEGATING_METHODS
 };
@@ -355,7 +485,7 @@ static const MIDL_STUB_DESC Object_StubDesc =
     0,
     0x800025b, /* MIDL Version 8.0.603 */
     0,
-    0,
+    UserMarshalRoutines,
     0,  /* notify & notify_flag routine table */
     0x1, /* MIDL flag */
     0, /* cs routines */

@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 8.00.0603 */
-/* at Fri Jan 19 15:54:17 2018
+/* at Mon Jan 22 01:20:08 2018
  */
 /* Compiler settings for Polygon.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 
@@ -107,6 +107,14 @@ EXTERN_C const IID IID_IPolyCtl;
         virtual /* [id][propput] */ HRESULT STDMETHODCALLTYPE put_Sides( 
             /* [in] */ SHORT newVal) = 0;
         
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DrawPoly( 
+            /* [in] */ HDC dc,
+            /* [in] */ LPCRECTL rect) = 0;
+        
+        virtual /* [id] */ HRESULT STDMETHODCALLTYPE DrawPoly2( 
+            /* [in] */ LONG dc,
+            /* [in] */ LONG *pr) = 0;
+        
     };
     
     
@@ -181,6 +189,16 @@ EXTERN_C const IID IID_IPolyCtl;
             IPolyCtl * This,
             /* [in] */ SHORT newVal);
         
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DrawPoly )( 
+            IPolyCtl * This,
+            /* [in] */ HDC dc,
+            /* [in] */ LPCRECTL rect);
+        
+        /* [id] */ HRESULT ( STDMETHODCALLTYPE *DrawPoly2 )( 
+            IPolyCtl * This,
+            /* [in] */ LONG dc,
+            /* [in] */ LONG *pr);
+        
         END_INTERFACE
     } IPolyCtlVtbl;
 
@@ -228,6 +246,12 @@ EXTERN_C const IID IID_IPolyCtl;
 
 #define IPolyCtl_put_Sides(This,newVal)	\
     ( (This)->lpVtbl -> put_Sides(This,newVal) ) 
+
+#define IPolyCtl_DrawPoly(This,dc,rect)	\
+    ( (This)->lpVtbl -> DrawPoly(This,dc,rect) ) 
+
+#define IPolyCtl_DrawPoly2(This,dc,pr)	\
+    ( (This)->lpVtbl -> DrawPoly2(This,dc,pr) ) 
 
 #endif /* COBJMACROS */
 
@@ -375,6 +399,11 @@ PolyCtl;
 #endif /* __PolygonLib_LIBRARY_DEFINED__ */
 
 /* Additional Prototypes for ALL interfaces */
+
+unsigned long             __RPC_USER  HDC_UserSize(     unsigned long *, unsigned long            , HDC * ); 
+unsigned char * __RPC_USER  HDC_UserMarshal(  unsigned long *, unsigned char *, HDC * ); 
+unsigned char * __RPC_USER  HDC_UserUnmarshal(unsigned long *, unsigned char *, HDC * ); 
+void                      __RPC_USER  HDC_UserFree(     unsigned long *, HDC * ); 
 
 /* end of Additional Prototypes */
 
